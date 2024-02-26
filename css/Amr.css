@@ -923,6 +923,149 @@ header .nav li:last-child:hover .mega-menu {
 }
 /* end questions */
 
+/* start events */
+.Events {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+}
+.Events .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Events .container .Event {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.Events .Event img {
+  max-width: 450px;
+}
+@media (max-width: 991px) {
+  .Events .Event img {
+    display: none;
+  }
+}
+.Events .Event .content {
+  flex: 1;
+  text-align: center;
+}
+.Events .Event .time {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 771px) {
+  .Events .Event .time {
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+}
+.Events .Event .box {
+  display: flex;
+  border: 1px solid rgb(0 0 0 / 20%);
+  flex-direction: column;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+.Events .Event .box span {
+  transition: var(--main-transition);
+}
+.Events .Event .box span:first-child {
+  padding: 30px 20px;
+  border-bottom: 1px solid rgb(0 0 0 / 20%);
+  text-align: center;
+  color: var(--main-color);
+  font-size: 35px;
+}
+.Events .Event .box span:last-child {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+.Events .Event .box:hover,
+.Events .Event .box:hover span:first-child {
+  border-color: var(--main-color);
+}
+.Events .content h2 {
+  margin: 0 auto 25px;
+  font-size: 30px;
+}
+.Events .content p {
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 20px;
+  color: var(--p-color);
+}
+@media (max-width: 771px) {
+  .Events .content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+.Events .subscribe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Events .subscribe form {
+  width: 600px;
+  background-color: #f6f5f5;
+  display: flex;
+  gap: 20px;
+  padding: 25px 40px;
+  border-radius: 50px;
+}
+@media (max-width: 771px) {
+  .Events .subscribe form {
+    width: 380px;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+}
+.Events .subscribe input[type="email"] {
+  padding: 20px;
+  border-radius: 40px;
+  flex-basis: 80%;
+  border: none;
+  color: var(--main-color);
+  caret-color: var(--main-color);
+}
+.Events .subscribe input[type="submit"] {
+  padding: 20px;
+  border-radius: 40px;
+  color: white;
+  background-color: var(--main-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  flex-basis: 20%;
+  transition: var(--main-transition);
+}
+@media (max-width: 771px) {
+  .Events .subscribe input[type="email"],
+  .Events .subscribe input[type="submit"] {
+    border-radius: 10px;
+  }
+}
+.Events .subscribe input[type="email"]:focus {
+  outline: none;
+}
+.Events .subscribe input[type="email"]:focus::placeholder {
+  opacity: 0;
+}
+.Events .subscribe input[type="email"]::placeholder {
+  transition: opacity var(--main-transition);
+}
+.Events .subscribe input[type="submit"]:hover {
+  background-color: var(--main-color-alt);
+}
+/* end events */
+
 /* start animation */
 @keyframes up-and-down {
   0%,
