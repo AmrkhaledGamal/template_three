@@ -1066,6 +1066,20 @@ header .nav li:last-child:hover .mega-menu {
 }
 /* end events */
 
+/* start price */
+.Pricing {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+  background-color: var(--section-background);
+}
+.Pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+/* End price */
+
 /* start animation */
 @keyframes up-and-down {
   0%,
