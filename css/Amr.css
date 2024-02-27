@@ -1078,6 +1078,120 @@ header .nav li:last-child:hover .mega-menu {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
 }
+.Pricing .box {
+  position: relative;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  transition: var(--main-transition);
+  z-index: 1;
+}
+.Pricing .box::before,
+.Pricing .box::after {
+  content: "";
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 0;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+.Pricing .box::before {
+  height: 52%;
+  top: 0;
+  left: 0;
+}
+.Pricing .box::after {
+  right: 0;
+  bottom: 0;
+  height: 48%;
+}
+.Pricing .box:hover::before,
+.Pricing .box:hover::after {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .Pricing .box:nth-of-type(2) {
+    transform: translateY(-15px);
+  }
+}
+.Pricing .box .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px 35px 10px;
+  font-size: 18px;
+  right: 20px;
+  width: 40px;
+}
+.Pricing .box .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  border-width: 20px;
+}
+.Pricing .box:hover .label::before {
+  border-color: transparent transparent #f6f6f6 transparent;
+  transition-delay: 0.2s;
+}
+.Pricing .box h3 {
+  margin: 30px auto 30px;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+.Pricing .box img {
+  width: 80px;
+  margin-bottom: 25px;
+}
+.Pricing .box .price {
+  margin: 0 auto 25px;
+}
+.Pricing .box span {
+  display: block;
+}
+.Pricing .box .amount {
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.Pricing .box span:last-child {
+  color: var(--p-color);
+}
+.Pricing .box ul {
+  text-align: start;
+}
+.Pricing .box ul li {
+  padding: 20px;
+  border-top: 1px solid var(--border-color);
+}
+.Pricing .box ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+.Pricing .box .choose a {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 30px;
+  border: 2px solid var(--main-color);
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: var(--main-color);
+  font-weight: bold;
+  transition: var(--main-transition);
+}
+.Pricing .box .choose:hover a {
+  color: white;
+  background-color: var(--main-color-alt);
+  border-color: var(--main-color-alt);
+}
 /* End price */
 
 /* start animation */
