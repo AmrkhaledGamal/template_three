@@ -292,6 +292,25 @@ header .nav li:last-child:hover .mega-menu {
 .landing {
   position: relative;
 }
+.landing .up {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  right: 15px;
+  bottom: -40px;
+  color: white;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+  transition: var(--main-transition);
+}
+.landing .show {
+  bottom: 15px;
+}
 .landing::before {
   content: "";
   position: absolute;
